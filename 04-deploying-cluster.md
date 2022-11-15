@@ -9,8 +9,9 @@ baseDomain: dynamic.opentlc.com
 metadata:
   name: schmaustech <===CLUSTER NAME
 networking:
-  networkType: OpenShiftSDN <===NETWORK SDN TO USE ON DEPLOY
-  machineCIDR: 10.20.0.0/24 <=== EXTERNAL/BAREMETAL NETWORK
+  machineNetwork:
+  - cidr: 10.20.0.0/24   <=== EXTERNAL/BAREMETAL NETWORK
+  networkType: OVNKubernetes<===NETWORK SDN TO USE ON DEPLOY
 compute:
 - name: worker
   replicas: 2 <===NUMBER OF WORKERS ON DEPLOYMENT
@@ -25,9 +26,8 @@ platform:
     provisioningNetworkInterface: ens3
     apiVIP: 10.20.0.110
     ingressVIP: 10.20.0.112
-    dnsVIP: 10.20.0.111
-    bootstrapOSImage: http://10.20.0.2/images/rhcos-45.82.202008010929-0-qemu.x86_64.qcow2.gz?sha256=c9e2698d0f3bcc48b7c66d7db901266abf27ebd7474b6719992de2d8db96995a
-    clusterOSImage: http://10.20.0.2/images/rhcos-45.82.202008010929-0-openstack.x86_64.qcow2.gz?sha256=359e7c3560fdd91e64cd0d8df6a172722b10e777aef38673af6246f14838ab1a
+    bootstrapOSImage: http://10.20.0.2/images/4.11.13-x86_64/rhcos-411.86.202210041459-0-qemu.x86_64.qcow2.gz?sha256=5dbc9dc6bb358a335ce353dd0c0f84bf3960ba855bc501d40edd3d44c26e19a1
+    clusterOSImage: http://10.20.0.2/images/4.11.13-x86_64/rhcos-411.86.202210041459-0-openstack.x86_64.qcow2.gz?sha256=506bb66f8cb407c74061a8201f13e7b1edd44000d944be85eb7a4df7058dcb79
     hosts:
       - name: master-0
         role: master
