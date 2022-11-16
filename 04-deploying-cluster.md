@@ -29,7 +29,7 @@ platform:
     bootstrapOSImage: http://10.20.0.2/images/4.11.13-x86_64/rhcos-411.86.202210041459-0-qemu.x86_64.qcow2.gz?sha256=5dbc9dc6bb358a335ce353dd0c0f84bf3960ba855bc501d40edd3d44c26e19a1
     clusterOSImage: http://10.20.0.2/images/4.11.13-x86_64/rhcos-411.86.202210041459-0-openstack.x86_64.qcow2.gz?sha256=506bb66f8cb407c74061a8201f13e7b1edd44000d944be85eb7a4df7058dcb79
     bootstrapExternalStaticIP: 10.20.0.115
-    bootstrapExternalStaticGateway: 10.20.0.1
+    bootstrapExternalStaticGateway: 10.20.0.2
     hosts:
       - name: master-0
         role: master
