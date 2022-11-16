@@ -75,10 +75,10 @@ sshKey: 'ssh-rsa REDACTED SSH KEY lab-user@provision'
 imageContentSources:
 - mirrors:
   - provision.schmaustech.students.osp.opentlc.com:5000/ocp4/openshift4
-  source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+  source: quay.io/openshift-release-dev/ocp-release
 - mirrors:
   - provision.schmaustech.students.osp.opentlc.com:5000/ocp4/openshift4
-  source: registry.svc.ci.openshift.org/ocp/release
+  source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
 pullSecret: 'REDACTED PULL SECRET'
 additionalTrustBundle: |
   -----BEGIN CERTIFICATE-----
