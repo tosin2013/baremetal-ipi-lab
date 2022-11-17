@@ -39,7 +39,7 @@ platform:
           password: redhat
         bootMACAddress: de:ad:be:ef:00:40
 	rootDeviceHints:
-	  deviceName: /dev/vdb
+	  deviceName: /dev/sdb
       - name: master-1
         role: master
         bmc:
@@ -48,7 +48,7 @@ platform:
           password: redhat
         bootMACAddress: de:ad:be:ef:00:41
 	rootDeviceHints:
-	  deviceName: /dev/vdb
+	  deviceName: /dev/sdb
       - name: master-2
         role: master
         bmc:
@@ -57,7 +57,7 @@ platform:
           password: redhat
         bootMACAddress: de:ad:be:ef:00:42
 	rootDeviceHints:
-	  deviceName: /dev/vdb
+	  deviceName: /dev/sdb
       - name: worker-0
         role: worker
         bmc:
@@ -66,7 +66,7 @@ platform:
           password: redhat
         bootMACAddress: de:ad:be:ef:00:50
 	rootDeviceHints:
-	  deviceName: /dev/vdb
+	  deviceName: /dev/sdb
       - name: worker-1
         role: worker
         bmc:
@@ -75,7 +75,7 @@ platform:
           password: redhat
         bootMACAddress: de:ad:be:ef:00:51
 	rootDeviceHints:
-	  deviceName: /dev/vdb
+	  deviceName: /dev/sdb
 sshKey: 'ssh-rsa REDACTED SSH KEY lab-user@provision'
 imageContentSources:
 - mirrors:
