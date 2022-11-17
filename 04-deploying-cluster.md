@@ -38,7 +38,8 @@ platform:
           username: admin
           password: redhat
         bootMACAddress: de:ad:be:ef:00:40
-        hardwareProfile: openstack
+	rootDeviceHints:
+	  deviceName: /dev/vdb
       - name: master-1
         role: master
         bmc:
@@ -46,7 +47,8 @@ platform:
           username: admin
           password: redhat
         bootMACAddress: de:ad:be:ef:00:41
-        hardwareProfile: openstack
+	rootDeviceHints:
+	  deviceName: /dev/vdb
       - name: master-2
         role: master
         bmc:
@@ -54,7 +56,8 @@ platform:
           username: admin
           password: redhat
         bootMACAddress: de:ad:be:ef:00:42
-        hardwareProfile: openstack
+	rootDeviceHints:
+	  deviceName: /dev/vdb
       - name: worker-0
         role: worker
         bmc:
@@ -62,7 +65,8 @@ platform:
           username: admin
           password: redhat
         bootMACAddress: de:ad:be:ef:00:50
-        hardwareProfile: openstack
+	rootDeviceHints:
+	  deviceName: /dev/vdb
       - name: worker-1
         role: worker
         bmc:
@@ -70,7 +74,8 @@ platform:
           username: admin
           password: redhat
         bootMACAddress: de:ad:be:ef:00:51
-        hardwareProfile: openstack
+	rootDeviceHints:
+	  deviceName: /dev/vdb
 sshKey: 'ssh-rsa REDACTED SSH KEY lab-user@provision'
 imageContentSources:
 - mirrors:
